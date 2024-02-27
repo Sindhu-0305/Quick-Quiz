@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+:root{
+    background-color:black;
+    font-size:10px;
+}
+h1{
+    color:dodgerblue;
+    font-size: 4.4rem;
+    margin-bottom: 5rem;
+}
+.splashscreen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, black,dodgerblue); 
+    color:dodgerblue ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;/* Ensure the splash screen appears above other content */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-size: 200% auto;/*So, background-size: 200% auto; ensures that the background image (in this case, the gradient) spans twice the width of the element, while the height adjusts automatically to maintain the aspect ratio. */
+
+    animation: gradientanimation 4s ease infinite;/*The ease timing function starts slow, accelerates in the middle, and then slows down again towards the end of the animation*/
+
+}
+@keyframes gradientanimation{
+    0%{
+        background-position: 0% 40%;
+    }
+    100%{
+        background-position: 100% 70%;
+    }
+}
+.loadingindicator{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.loader{
+    border: 8px solid lightgrey;
+    border-top: 8px solid dodgerblue ;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;/*spin animation, linear timing function progresses at a constant speed throughout the duration of the animation*/
+    margin-bottom: 2rem;
+}
+
+/*In CSS animations, the @keyframes rule is used to define these keyframes. It allows you to specify the styles that an element should have at various points during the animation.*/
+@keyframes spin {/*begininng of keyframe animation named spin*/
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+    /*together, these keyframes create an animation where the element gradually rotates from 0 degrees to 360 degrees as the animation progresses*/
+}
+
+
+.splashscreen h1 {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+}
+.splashscreen p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width:100%;
+    /* margin: 0 auto; */
+    user-select: none;
+    padding: 2rem;
+}
+/* .container > *{
+    width: 100%;
+} */
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+.container > * {
+    width: 100%;
+  }/*to make the container width stay 100% irrespective of the question size*/
+.hidden{
+    display: none;
+}
+/*buttons*/
+.btn{
+    font-size:1.8rem;
+    border: 0.1rem solid;
+    border-color: cornflowerblue;
+    align-items: center;
+    text-align: center;
+    color:cornflowerblue;
+    text-decoration: none;
+    padding:8px;
+    background-color:white;
+    margin-bottom: 1rem;
+    width: 18rem;
+   font-weight: 200;
+    
+
+}
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px lightblue;
+    transform: translateY(-0.2rem);
+    transition: transform 150ms;
+}
+.btn[disabled]:hover{
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+input{
+    margin-bottom: 1rem;
+    font-size:1.8rem;
+    border: 0.1rem solid;
+    border-color: cornflowerblue;
+    align-items: center;
+    text-align: center;
+    color:black;
+    padding:8px;
+    background-color:white;
+    width: 18rem;
+    font-weight: 200;
+    box-shadow: 0 0.1rem 1.4rem 0 lightblue;
+}
+input::placeholder{
+    color: grey;
+}

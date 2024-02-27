@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get-Set-Play</title>
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo/question.png">
+</head>
+<body>
+    <div class="container">
+        <div id="loader"></div>
+        <div id="game" class="justify-centre flex-column hidden">
+            <div id="hud">
+                <div id="hud-item">
+                    <p id="questioncounter" class="hud-prefix">
+                        Question
+                    </p>
+                    <div id="progressbar">
+                    <div id="progressbarfull">
+                    </div>
+                    </div>
+                </div>
+                <div id="hud-item">
+                    <p class="hud-prefix">Score</p>
+                    <h1 class="hud-main" id="score">
+                        0
+                    </h1>
+                </div>
+                
+            </div>
+            
+            
+            
+            <h2 id="question"> </h2>
+            <br>
+            <br>
+            <div class="choice-container">
+                <p class="prefix">A</p>
+                <p class="choice-text" data-number="1"></p>
+            </div>
+            <div class="choice-container">
+                <p class="prefix">B</p>
+                <p class="choice-text" data-number="2"></p>
+            </div>
+            <div class="choice-container">
+                <p class="prefix">C</p>
+                <p class="choice-text" data-number="3"></p>
+            </div>
+            <div class="choice-container">
+                <p class="prefix">D</p>
+                <p class="choice-text" data-number="4"></p>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="loader" id="loader"></div> -->
+
+    <script src="game.js"></script>
+</body>
+</html>
