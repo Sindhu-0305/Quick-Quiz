@@ -35,7 +35,7 @@ let questions=[];
 
 
 /*----> fetch question from api(open trivia api) code snippet*/
-fetch("https://opentdb.com/api.php?amount=10&category=11&difficulty=easy&type=multiple")
+fetch("https://opentdb.com/api.php?amount=20&type=multiple")
    .then(res=>{
     return res.json();
    })
